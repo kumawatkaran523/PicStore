@@ -20,7 +20,7 @@ const upload = multer({
       "image/jpeg",
       "image/png",
       "image/gif",
-    ];
+    ];process.env.JWT_SECRET;
     if (allowedTypes.includes(file.mimetype)) {
       cb(null, true);
     } else {
